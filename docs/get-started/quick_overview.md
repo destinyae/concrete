@@ -8,13 +8,13 @@ In this document, we give a quick overview of the philosophy behind Concrete.
 
 Concrete is a compiler, which aims to turn Python code into its FHE equivalent, in a process which is
 called the FHE compilation. The best efforts were made to simplify the process: in particular,
-exceptions apart, the same functions than the Python users are used to use are available. More complete
+exceptions apart, the same functions that the Python users are used to using are available. More complete
 list of available functions is given [in the reference section](../dev/compatibility.md).
 
 ### Levelled vs non-levelled operations
 
 Basically, in the compiled circuit, there will be two kind of operations:
-- levelled operations, which are the additions, subtractions or multiplications by a constant; these
+- leveled operations, which are the additions, subtractions or multiplications by a constant; these
 operations are also called the linear operations
 - Table Lookup (TLU) operations, which are used to do anything which is not linear.
 
@@ -24,10 +24,10 @@ different sections of the documentation: [direct TLU use](../core-features/table
 tools in Concrete to replace univariate or multivariate non-linear functions (ie, functions of one
 or more inputs) by TLU.
 
-TLU are more costly that levelled operations, so we also explain how to limit their impact.
+TLU are more costly than leveled operations, so we also explain how to limit their impact.
 
 Remark that matrix multiplication (aka Gemm -- General Matrix multiplication) and convolutions are
-levelled operations, since they imply only additions and multiplications by constant.
+leveled operations, since they imply only additions and multiplications by constant.
 
 ### Conditional branches and loops
 
@@ -47,7 +47,7 @@ be converted to an integer Table Lookup, for example, `(60 * np.sin(x)).astype(n
 
 ### Scalars and tensors
 
-Functions can use scalar and tensors. As with Python, it is prefered to use tensorization, to make
+Functions can use scalar and tensors. As with Python, it is preferred to use tensorization, to make
 computations faster.
 
 ### Inputs
